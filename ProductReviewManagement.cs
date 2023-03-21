@@ -64,5 +64,11 @@ namespace ProductReviewManagement
             List<ProductReview> result = list.Where(p => p.Review.Contains("Nice")).ToList();
             Program.DisplayProductReviews(result);
         }
+
+        public static void FindRecordsWhoseIdIs10(List<ProductReview> list)
+        {
+            List<ProductReview> result = list.Where(x => x.UserId == 10).OrderBy(x => x.Rating).ToList();
+            Program.DisplayProductReviews(result);
+        }
     }
 }
