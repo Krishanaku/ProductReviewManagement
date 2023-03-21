@@ -41,5 +41,17 @@ namespace ProductReviewManagement
                 Console.WriteLine("ProductId: " + item.Id + " ->  " + "Review: " + item.Review);
             }
         }
+
+        public static void SkipTop5Records(List<ProductReview> list)
+        {
+            List<ProductReview> result = list.Skip(5).ToList();
+            Program.DisplayProductReviews(result);
+        }
+
+        public static void FindRecordsWhoseIsLikeValueIsTrue(List<ProductReview> list)
+        {
+            List<ProductReview> result = list.Where(x => x.IsLike == true).OrderBy(x => x.IsLike).ToList();
+            Program.DisplayProductReviews(result);
+        }
     }
 }
