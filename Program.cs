@@ -43,6 +43,7 @@ namespace ProductReviewManagement
                     "5.DisplayProductIdAndReview\n" +
                     "6.SkipTop5Records\n" +
                     "8.FindRecordsWhoseIsLikeValueIsTrue\n" +
+                    "9.FindAverageRecords\n" +
                     "15.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -87,6 +88,12 @@ namespace ProductReviewManagement
                         Console.Clear();
                         Console.WriteLine("All Records from the list who's Islike value is \"true\":-\n-----------------------------------------");
                         ProductReviewManagement.FindRecordsWhoseIsLikeValueIsTrue(list);
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
+                    case 9:
+                        Console.Clear();
+                        Console.WriteLine("Finding average rating of each ProductId are:-\n-----------------------------------------");
+                        ProductReviewManagement.FindAverageRecords(list);
                         Console.Write("\nPress any key to continue...... ");
                         break;
                     case 15:
