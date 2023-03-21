@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace ProductReviewManagement
 {
+    /// <summary>
+    /// UC-1 Create ProductReview class
+    /// </summary>
     public class ProductReview
     {
         public int ProductId { get; set; }
         public int UserId { get; set; }
-        public double Rating { get; set; }
+        public int Rating { get; set; }
         public string Review { get; set; }
-        public bool isLike { get; set; }
-
+        public bool IsLike { get; set; }
+        public override string ToString()
+        {
+            return $"UserId: {UserId} ProductId: {ProductId} Rating: {Rating} Review: {Review} IsLike: {IsLike}";
+        }
     }
 }
