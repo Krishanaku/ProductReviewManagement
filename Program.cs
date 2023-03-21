@@ -24,13 +24,17 @@
                 new ProductReview() {ProductId =5, UserId=10, Rating=3, Review= "Nice", isLike=true}
             };
 
-            foreach (var list in productReviews)
-            {
-                Console.WriteLine("Product Id:" + list.ProductId + "UserId: " + list.UserId + "Rating:" + list.Rating + "Review:" + list.Review + "Like: " + list.isLike);
+            //foreach(var list in productReviews)
+            //{
+            //    Console.WriteLine("Product Id:"+list.ProductId + "UserId: "+list.UserId + "Rating:" +list.Rating + "Review:" +list.Review +"Like: "+list.isLike);
 
-            }
+            //}
 
+            Management management= new Management();
+            management.TopRecordList(productReviews);
 
+            //management.SelectRecordList(productReviews);
+            //management.RetrieveCount(productReviews);
 
         }
     }
