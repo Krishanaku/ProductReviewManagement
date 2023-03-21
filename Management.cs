@@ -36,7 +36,15 @@ namespace ProductReviewManagement
             }
         }
 
+        public void RetrieveCount(List<ProductReview> review)
+        {
+            var recordData = review.GroupBy(x => x.ProductId).Select(x => new { ProductID = x.Key, Count = x.Count() });
 
+            foreach (var record in recordData)
+            {
+                Console.WriteLine(record.ProductID + "--------"+ record.Count);
+            }
+        }
 
 
 
