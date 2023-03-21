@@ -33,8 +33,8 @@
             Management management= new Management();
             //management.TopRecordList(productReviews);
 
-            management.SelectRecordList(productReviews);
-            //management.RetrieveCount(productReviews);
+            //management.SelectRecordList(productReviews);
+             management.RetrieveCount(productReviews);
 
         }
     }
