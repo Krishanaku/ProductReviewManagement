@@ -8,7 +8,7 @@ namespace ProductReviewManagement
 {
     public class ProductReviewManagement
     {
-       
+
         public static void RetreiveTop3Records(List<ProductReview> list)
         {
             Console.WriteLine("\nUsing method Syntax");
@@ -16,7 +16,7 @@ namespace ProductReviewManagement
             Program.DisplayProductReviews(sortedInDesending);
         }
 
-     
+
         public static void FetchRecordsBasedOnRatingAndProductId(List<ProductReview> list)
         {
             List<ProductReview> result = list.Where(p => p.Rating > 3 && p.ProductId == 1 || p.ProductId == 4 || p.ProductId == 9).ToList();
@@ -32,7 +32,7 @@ namespace ProductReviewManagement
             }
         }
 
-      
+
         public static void DisplayProductIdAndReview(List<ProductReview> list)
         {
             var result = list.Select(p => new { Id = p.ProductId, Review = p.Review }).ToList();
@@ -40,12 +40,6 @@ namespace ProductReviewManagement
             {
                 Console.WriteLine("ProductId: " + item.Id + " ->  " + "Review: " + item.Review);
             }
-        }
-
-        public static void SkipTop5Records(List<ProductReview> list)
-        {
-            List<ProductReview> result = list.Skip(5).ToList();
-            Program.DisplayProductReviews(result);
         }
     }
 }
