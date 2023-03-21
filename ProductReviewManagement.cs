@@ -53,5 +53,10 @@ namespace ProductReviewManagement
             List<ProductReview> result = list.Where(x => x.IsLike == true).OrderBy(x => x.IsLike).ToList();
             Program.DisplayProductReviews(result);
         }
+        public static void FindAverageRecords(List<ProductReview> list)
+        {
+            var result = list.Average(p => p.Rating);
+            Console.WriteLine("Average records are: {0}", result);
+        }
     }
 }
